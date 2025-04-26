@@ -8,6 +8,16 @@ and how to test them.
 A basic objective is to define how to make a package that is "personally compiled
 from source" available to a locally running webR.
 
+## Security issues
+
+- To get the process documented here to work with chrome on mac,
+I had to use `chrome://flags/#unsafely-treat-insecure-origin-as-secure`
+and identify `http://localhost:8080` as an associated origin; when
+the `chrome:` URL is given, a form is provided and you can enter
+URLs you want to trust.  *Be sure to disable this when testing is done.*
+ 
+- Note also the headers in staticPaths for the runServer call below.
+
 ## Using the action in this repo to build an artifact.tar
 
 The packages in the root text file `packages` will be compiled
@@ -32,7 +42,7 @@ runServer(
     staticPaths = list(
       "/" = staticPath(
         "repo",
-        headers = list("Access-Control-Allow-Origin" =  "*")
+        headers = list("Access-Control-Allow-Origin" =  "*", "Content-Security-Policy" = "upgrade-insecure-requests")
         )
       )
     )
