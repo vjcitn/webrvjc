@@ -1,0 +1,59 @@
+
+install("GenomeInfoDbData", repos=c("http://localhost:8080"))
+install("MatrixGenerics", repos=c("http://localhost:8080", 'https://repo.r-wasm.org', "https://webr.bioconductor.org/3.20")) 
+install("GenomicRanges", repos=c("http://localhost:8080", 'https://repo.r-wasm.org', "https://webr.bioconductor.org/3.20")) 
+
+install(c("crayon", "abind", "lattice"), repos=c("http://localhost:8080", 'https://repo.r-wasm.org', "https://webr.bioconductor.org/3.20"))
+
+# DelayedArray needs SparseArray
+install("SparseArray", repos=c("http://localhost:8080", 'https://repo.r-wasm.org', "https://webr.bioconductor.org/3.20", "https://bioc.r-universe.dev")) 
+
+install("DelayedArray", repos=c("http://localhost:8080"))  # succeeds but won't load
+
+# example(DelayedArray) works but eventually wants hdf5 which I skip
+
+
+
+install("SummarizedExperiment", repos=c("http://localhost:8080"))  # works and se0 example succeeds
+
+attempting to install iSEE with localhost repo leads to:
+
+Warning messages:
+1: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package SingleCellExperiment not found in webR binary repo.
+2: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package shiny not found in webR binary repo.
+3: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package shinydashboard not found in webR binary repo.
+4: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package shinyAce not found in webR binary repo.
+5: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package shinyjs not found in webR binary repo.
+6: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package DT not found in webR binary repo.
+7: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package rintrojs not found in webR binary repo.
+8: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package ggplot2 not found in webR binary repo.
+9: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package ggrepel not found in webR binary repo.
+10: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package colourpicker not found in webR binary repo.
+11: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package igraph not found in webR binary repo.
+12: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package vipor not found in webR binary repo.
+13: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package mgcv not found in webR binary repo.
+14: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package viridisLite not found in webR binary repo.
+15: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package shinyWidgets not found in webR binary repo.
+16: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package listviewer not found in webR binary repo.
+17: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package ComplexHeatmap not found in webR binary repo.
+18: In install(dep, repos, info, lib, quiet, mount) :
+  Requested package circlize not found in webR binary repo.
+19: In value[[3L]](cond) :
+  Can't mount archive, no VFS metadata found. Falling back to traditional `.tgz` extraction.

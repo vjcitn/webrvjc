@@ -41,4 +41,7 @@ runServer(
 ```
 
 Then, within webR, `repos="http://localhost:8080"` can be used with
-`webr::install` to install any of the packages in the `packages` folder.
+`webr::install` to install any of the packages in the `packages` folder, **provided**
+all "required" dependencies are present.  See the notes.txt in this repo for
+a sequence of installation commands that got us to the point that SummarizedExperiment
+could be used.
