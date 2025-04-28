@@ -1,14 +1,2 @@
-vjcitn/parody
-vjcitn/SummarizedExperimentGHA@webrvjc
 iSEE/iSEE
-bioconductor/MatrixGenerics@RELEASE_3_20
-bioconductor/GenomicRanges@RELEASE_3_20
-bioconductor/Biobase@RELEASE_3_20
-Matrix
-bioconductor/BiocGenerics@RELEASE_3_20
-bioconductor/S4Vectors@RELEASE_3_20
-bioconductor/IRanges@RELEASE_3_20
-bioconductor/S4Arrays@RELEASE_3_20
-vjcitn/GenomeInfoDbData
-bioconductor/SparseArray@RELEASE_3_20
-bioconductor/DelayedArray@RELEASE_3_20
+bioconductor/GenomeInfoDbData@RELEASE_3_21
